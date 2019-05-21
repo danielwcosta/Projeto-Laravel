@@ -55,4 +55,8 @@ Route::get('/desafio/{idade}', function($idade){
 // controller fica na pasta app/Http/Controllers
 // fazer uma rota pra cada função.
 Route::get('/filmes', 'FilmesController@exibirTodos');
+Route::get('/filmes/{id}','FilmesController@exibirDetalhes');
+
+Route::get('/filme/adicionar','FilmesController@adicionarFilme');// mudou para filme sem S para não interferir com id
+Route::post('/filme/adicionar','FilmesController@salvarFilme');// por ser post pode ter a mesma rota mas a função tem q ser diferente
 
