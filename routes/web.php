@@ -25,7 +25,7 @@ Route::get('saudacoes/{nome}', function($nome){
     echo 'Olá ' . $nome;
 });
 
-// rota com parametro opcional 
+// rota com parametro opcional
 // usa ? para dizer q parametro é opcional
 Route::get('/multiplicacao/{numero1}/{numero2?}', function($numero1,$numero2 = null){
     if($numero2 != null){
@@ -60,3 +60,7 @@ Route::get('/filmes/{id}','FilmesController@exibirDetalhes');
 Route::get('/filme/adicionar','FilmesController@adicionarFilme');// mudou para filme sem S para não interferir com id
 Route::post('/filme/adicionar','FilmesController@salvarFilme');// por ser post pode ter a mesma rota mas a função tem q ser diferente
 
+Route::get('/filme/editar/{id}','FilmesController@editarFilme');
+Route::post('/filme/editar/{id}','FilmesController@gravarFilme');
+
+Route::get('/filme/excluir/{id}','FilmesController@excluirFilme');

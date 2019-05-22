@@ -28,6 +28,9 @@
                 <a href="/filmes/{{ $filme->id }}">
                     {{ $filme->titleComRating() }}
                 </a>
+
+                <a href="/filme/editar/{{ $filme->id }}" class="btn btn-success btn-sm">Editar</a>
+                <a href="/filme/excluir/{{ $filme->id }}" class="btn btn-danger btn-sm">Excluir</a>
             </li>
 
 

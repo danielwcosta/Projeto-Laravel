@@ -18,6 +18,15 @@
        <p>Rating: {{ $filme->rating }}</p>
        <p>Duração: {{ $filme->length }} minutos</p>
 
+<!-- // isset é um if(isset) -->
+       @isset($filme->genero)
+       <p>Gênero: {{ $filme->genero->nameComRanking() }}</p>
+       @else
+       <p>Gênero: Nenhum gênero informado.</p>
+       @endisset
+
+       {{ $filme->atores->implode('first_name', '/') }}
+
     </div>
 
 </body>
