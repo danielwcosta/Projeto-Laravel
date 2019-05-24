@@ -35,8 +35,8 @@
 
 
             @endforeach()
-
-            {{ $filmes->links() }}
+            <!-- coloca a barra com links das paginas -->
+            {{ $filmes->links() }} 
         </ul>
     </div>
 
